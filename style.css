@@ -216,11 +216,11 @@ header {
 }
 
 .card {
-    background-color: #f8f8f8;
+    background-color: var(--bege-claro);
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: all 1s cubic-bezier(0.25, 0.80, 0.25, 1);
 }
 
