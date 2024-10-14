@@ -216,7 +216,7 @@ header {
 }
 
 .card {
-    background-color: var(--bege-claro);
+    background-color: #D1E8D1;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 10px;
