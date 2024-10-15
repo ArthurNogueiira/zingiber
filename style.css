@@ -7,7 +7,7 @@
     --bege-claro: #fff6e5;
     --hover-color: #749275;
     --preto: #303030;
-    --rosa: #c987c3;
+    --rosa: #df45d2;
 }
 
 * {
@@ -19,7 +19,6 @@
 
 body {
     background-color: var(--bege-claro);
-    height: 100vw;
 }
 
 header {
@@ -112,7 +111,7 @@ header {
     color: var(--preto);
     margin-bottom: 15px;
     font-family: "Noto Serif", sans-serif;
-    font-size: 4rem;
+    font-size: 3.5rem;
 }
 
 .info p {
@@ -121,6 +120,11 @@ header {
     font-family: "Manrope", sans-serif;
     font-size: .8rem;
     max-width: 100%;
+}
+
+.info a {
+    font-weight: 800;
+    color: var(--rosa);
 }
 
 .btn-saiba-mais {
@@ -145,6 +149,7 @@ header {
     font-size: 1.1rem;
     gap: 15px;
     margin-left: 7px;
+    justify-content: left;
 }
 
 .social-icons a {
@@ -216,11 +221,12 @@ header {
 }
 
 .card {
-    background-color: #D1E8D1;
+    background-color: var(--hover-color);
+    background: linear-gradient(180deg, #749275, #d6e7b0);
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
     transition: all 1s cubic-bezier(0.25, 0.80, 0.25, 1);
 }
 
@@ -249,6 +255,7 @@ header {
 }
 
 .card p {
+    margin-top: 5px;
     text-align: center;
     font-size: .7rem;
     color: var(--preto);
@@ -261,18 +268,38 @@ header {
 }
 
 .card:hover h3 {
-    color: var(--bege-claro);
+    color: var(--preto);
 }
 
 .card:hover p {
-    color: var(--bege-claro);
+    color: var(--preto);
 }
 
 .card:hover .card-image {
-    border: 3px solid var(--bege-claro);
+    border: 3px solid var(--preto);
+}
+
+/* Footer */
+
+footer {
+    background: linear-gradient(80deg, #749275, #d6e7b0);
+    padding: 60px 50px;
+    text-align: center;
+}
+
+footer p {
+    font-family: "Montserrat", sans-serif;
+    color: var(--preto);
 }
 
 /* Responsividade */
+
+@media (max-width: 1024px) {
+    .card {
+        height: 250px;
+    }
+}
+
 
 @media screen and (max-width: 768px) {
     header {
@@ -345,5 +372,10 @@ header {
 
     .card:hover {
         transform: scale(1.020);
+    }
+
+    footer {
+        margin-top: 20px;
+        padding: 20px;
     }
 }
