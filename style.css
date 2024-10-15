@@ -73,6 +73,7 @@ header {
 }
 
 .menu li a {
+    padding: 10px;
     display: flex;
     font-size: 0.9rem;
     font-family: "Robot", sans-serif;
@@ -88,7 +89,7 @@ header {
 
 /* Container */
 
-#home, #equipe {
+#home, #equipe, #beneficios {
     scroll-margin-top: 80px; /* Altura do header */
 }
 
@@ -279,12 +280,63 @@ header {
     border: 3px solid var(--preto);
 }
 
+/* beneficios */
+
+.beneficios {
+    background: linear-gradient(90deg, #749275, #d6e7b0);
+    padding: 60px 40px;
+}
+
+.beneficios .title {
+    text-align: left;
+    font-size: 3rem;
+    color: var(--preto);
+    margin-bottom: 50px;
+}
+
+.beneficios-container {
+    justify-content: center;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+}
+
+.cards-beneficios {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    background-color: var(--bege-claro);
+    align-items: center;
+    padding: 15px 35px 20px 0px;
+    display: flex;
+    flex: 1;
+}
+
+.icon i {
+    color: var(--verde-escuro);
+    padding: 10px 35px;
+    font-size: 4rem;
+}
+
+.info-beneficios h1 {
+    font-family: "Lora", sans-serif;
+    color: var(--verde-escuro);
+}
+
+.info-beneficios p {
+    text-align: justify;
+    color: var(--preto);
+    font-family: "Manrope", sans-serif;
+    font-size: .8rem;
+}
+
 /* Footer */
 
 footer {
     background: linear-gradient(80deg, #749275, #d6e7b0);
     padding: 60px 50px;
     text-align: center;
+    margin-top: 35px;
 }
 
 footer p {
@@ -295,8 +347,20 @@ footer p {
 /* Responsividade */
 
 @media (max-width: 1024px) {
+
+    .cards-container {
+        width: 100%;
+        display: flex; /* Muda para flex */
+        flex-wrap: wrap; /* Permite quebra de linha */
+        justify-content: center; /* Centraliza os cartões */
+        gap: 5px; /* Ajusta o espaço entre os cartões */
+        padding: 0; /* Remove padding do container */
+    }
     .card {
-        height: 250px;
+        width: calc(50% - 10px); /* Ajusta a largura para 50% menos o espaço de gap */
+        margin: 0; /* Remove qualquer margem extra */
+        padding: 10px; /* Define padding interno */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombramento */
     }
 }
 
@@ -314,6 +378,10 @@ footer p {
         align-items: center;
         justify-content: center;
         margin-left: 27px;
+    }
+
+    .menu li a {
+        padding: 0;
     }
 
     .logo {
@@ -373,6 +441,30 @@ footer p {
     .card:hover {
         transform: scale(1.020);
     }
+
+    /* beneficios */
+
+    .beneficios {
+        margin-top: 30px;
+    }
+
+    .beneficios-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .beneficios .title h1 {
+        font-size: 3rem;
+    }
+
+    .beneficios-container i {
+        display: none;
+    }
+
+    .cards-beneficios {
+        padding: 15px;
+    }
+
 
     footer {
         margin-top: 20px;
