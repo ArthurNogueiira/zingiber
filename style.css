@@ -89,7 +89,7 @@ header {
 
 /* Container */
 
-#home, #equipe, #beneficios {
+#home, #equipe, #beneficios, #depoimentos, #contato{
     scroll-margin-top: 80px; /* Altura do header */
 }
 
@@ -330,6 +330,61 @@ header {
     font-size: .8rem;
 }
 
+/* Depoimentos */
+
+.depoimentos-container {
+    position: relative;
+    overflow: hidden; /* Garante que nada ultrapasse os limites da seção */
+    padding: 100px 50px;
+}
+
+.depoimentos-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(https://catracalivre.com.br/wp-content/uploads/2023/08/istock-473678416-scaled.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .7; /* Ajuste a opacidade aqui */
+    z-index: 0; /* Coloca a imagem de fundo atrás do conteúdo */
+}
+
+.depoimentos-cards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, auto);
+    gap: 25px;
+    position: relative; /* Garante que os cards fiquem acima do pseudo-elemento */
+    z-index: 1; /* Mantém os cards acima da imagem de fundo */
+    width: 100%;
+}
+
+.depoimentos {
+    padding: 15px;
+    background-color: var(--verde-escuro);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+    & i {
+        font-size: 2rem;
+        color: var(--preto);
+    }
+
+    & .depoimentos-texto {
+        font-family: "Manrope", sans-serif;
+        text-align: left;
+        color: var(--bege-claro);
+    }
+}
+
+
+
+
+
 /* Footer */
 
 footer {
@@ -463,6 +518,10 @@ footer p {
 
     .cards-beneficios {
         padding: 15px;
+    }
+
+    .depoimentos-cards {
+        grid-template-columns: repeat(1, 1fr);
     }
 
 
