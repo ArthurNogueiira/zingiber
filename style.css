@@ -89,7 +89,7 @@ header {
 
 /* Container */
 
-#home, #equipe, #beneficios, #depoimentos, #contato{
+#home, #equipe, #beneficios, #contato{
     scroll-margin-top: 80px; /* Altura do header */
 }
 
@@ -333,6 +333,7 @@ header {
 /* Depoimentos */
 
 .depoimentos-container {
+    margin-top: 30px;
     position: relative;
     overflow: hidden; /* Garante que nada ultrapasse os limites da seção */
     padding: 100px 50px;
@@ -381,9 +382,84 @@ header {
     }
 }
 
+/* contato */
 
+#contato {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 150px 0px;
+    gap: 150px;
+}
 
+#contato form {
+    display: flex;
+    flex-direction: column;
+}
 
+.form-text h1 {
+    font-family: "Lora", sans-serif;
+    font-size: 2.5rem;
+    color: var(--verde-escuro);
+    margin-bottom: .4rem;
+    text-align: left;
+}
+
+.form-text p {
+    font-family: "Manrope", sans-serif;
+    font-size: .9rem;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.social-icons {
+    margin: 0;
+}
+
+.social-icons i {
+    font-size: 1rem;
+    color: var(--bege-claro);
+    text-align: center;
+    align-items: center;
+    background-color: var(--verde-escuro);
+    border: 1px solid var(--preto);
+    padding: 8px;
+    border-radius: 50%;
+}
+
+form {
+    font-family: "Roboto", sans-serif;
+}
+
+form label {
+    font-weight: 600;
+    color: var(--preto);
+}
+
+.input-form, .email-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+#contato input {
+    padding: 6px;
+    border: 1px solid var(--verde-escuro);
+    border-radius: 6px;
+}
+
+.form-contact {
+    width: 20%;
+}
+
+.form-contact button {
+    margin: 15px auto;
+    padding: 10px;
+    width: 50%;
+    border-radius: 8px;
+    border: 1px solid var(--preto);
+    color: var(--preto);
+}
 
 /* Footer */
 
@@ -393,6 +469,7 @@ footer {
     text-align: center;
     margin-top: 35px;
 }
+
 
 footer p {
     font-family: "Montserrat", sans-serif;
@@ -524,6 +601,22 @@ footer p {
         grid-template-columns: repeat(1, 1fr);
     }
 
+    /* contato */
+
+    #contato {
+        flex-direction: column;
+        gap: 35px;
+        padding: 50px 0;
+    }
+
+    .form-text {
+        width: 80%;
+        padding: 0px;
+    }
+
+    .form-contact {
+        width: 80%;
+    }
 
     footer {
         margin-top: 20px;
